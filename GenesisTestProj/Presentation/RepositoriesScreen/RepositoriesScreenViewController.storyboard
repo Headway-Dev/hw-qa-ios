@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repositories Screen View Controller-->
+        <scene sceneID="b3I-dh-k7h">
+            <objects>
+                <viewController storyboardIdentifier="RepositoriesScreenViewController" id="Eby-HS-ljN" customClass="RepositoriesScreenViewController" customModule="GenesisTestProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hkK-xi-gAH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Otz-cK-iJj">
+                                <rect key="frame" x="0.0" y="44" width="360" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ukf-xF-dmH">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-3S-ef3">
+                                <rect key="frame" x="362" y="57" width="42" height="30"/>
+                                <state key="normal" title="Saved"/>
+                                <connections>
+                                    <action selector="savedRepositoriesOpened:" destination="Eby-HS-ljN" eventType="touchUpInside" id="Vol-MZ-VAX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SJN-YR-XTa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ukf-xF-dmH" firstAttribute="top" secondItem="I9A-3S-ef3" secondAttribute="bottom" constant="13" id="6Sl-q1-Zxo"/>
+                            <constraint firstItem="SJN-YR-XTa" firstAttribute="bottom" secondItem="Ukf-xF-dmH" secondAttribute="bottom" id="7C9-1V-wGV"/>
+                            <constraint firstItem="Otz-cK-iJj" firstAttribute="leading" secondItem="SJN-YR-XTa" secondAttribute="leading" id="G6g-ti-Bvv"/>
+                            <constraint firstItem="Otz-cK-iJj" firstAttribute="top" secondItem="SJN-YR-XTa" secondAttribute="top" id="Hxm-D0-0ys"/>
+                            <constraint firstItem="Ukf-xF-dmH" firstAttribute="centerX" secondItem="SJN-YR-XTa" secondAttribute="centerX" id="JQ1-eS-Uxk"/>
+                            <constraint firstItem="Ukf-xF-dmH" firstAttribute="top" secondItem="Otz-cK-iJj" secondAttribute="bottom" id="Q6S-t8-lLK"/>
+                            <constraint firstItem="SJN-YR-XTa" firstAttribute="trailing" secondItem="I9A-3S-ef3" secondAttribute="trailing" constant="10" id="RTZ-jU-7Dn"/>
+                            <constraint firstItem="I9A-3S-ef3" firstAttribute="leading" secondItem="Otz-cK-iJj" secondAttribute="trailing" constant="2" id="gKA-n8-GMt"/>
+                            <constraint firstItem="Ukf-xF-dmH" firstAttribute="width" secondItem="hkK-xi-gAH" secondAttribute="width" id="x9J-uc-FU2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="repositoriesTableView" destination="Ukf-xF-dmH" id="cc6-jT-qm2"/>
+                        <outlet property="savedButton" destination="I9A-3S-ef3" id="YDC-EX-t5I"/>
+                        <outlet property="searchBar" destination="Otz-cK-iJj" id="ei0-w8-Md4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5li-g5-4hO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150.72463768115944" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

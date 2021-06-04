@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="8vZ-tE-S0R">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="7SV-3a-z1W" customClass="LoginViewController" customModule="GenesisTestProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4tu-0O-n53">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhL-wu-efK">
+                                <rect key="frame" x="121.5" y="505" width="171" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="bWC-bX-PzY"/>
+                                    <constraint firstAttribute="height" constant="29" id="cmg-Zy-Uc1"/>
+                                </constraints>
+                                <state key="normal" title="Log In" image="SighnInWithGithubImage"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="7SV-3a-z1W" eventType="touchUpInside" id="zjc-lc-X4Y"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fFi-Z8-Fqv">
+                                <rect key="frame" x="87" y="331" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Cm1-Xf-Vsf"/>
+                                    <constraint firstAttribute="width" constant="240" id="kg4-Zv-LLk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UGT-Fn-6vP"/>
+                        <constraints>
+                            <constraint firstItem="fFi-Z8-Fqv" firstAttribute="centerX" secondItem="vhL-wu-efK" secondAttribute="centerX" id="39h-GL-kuP"/>
+                            <constraint firstItem="vhL-wu-efK" firstAttribute="top" secondItem="fFi-Z8-Fqv" secondAttribute="bottom" constant="46" id="7yt-EG-7g9"/>
+                            <constraint firstItem="vhL-wu-efK" firstAttribute="centerX" secondItem="UGT-Fn-6vP" secondAttribute="centerX" id="gNa-Eh-uCm"/>
+                            <constraint firstItem="vhL-wu-efK" firstAttribute="top" secondItem="UGT-Fn-6vP" secondAttribute="top" constant="461" id="sKj-2f-pCd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Utk-Re-t5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.71014492753625" y="179.46428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SighnInWithGithubImage" width="448" height="77"/>
+        <image name="githubLogo" width="1373" height="1373"/>
+    </resources>
+</document>
